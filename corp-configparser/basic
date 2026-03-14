@@ -1,0 +1,75 @@
+[Foo Bar]
+foo{0[0]}bar1
+[Spacey Bar]
+foo {0[0]} bar2
+[Spacey Bar From The Beginning]
+  foo {0[0]} bar3
+  baz {0[0]} qwe
+[Commented Bar]
+foo{0[1]} bar4 {1[1]} comment
+baz{0[0]}qwe {1[0]}another one
+[Long Line]
+foo{0[1]} this line is much, much longer than my editor
+   likes it.
+[Section\\with$weird%characters[\t]
+[Internationalized Stuff]
+foo[bg]{0[1]} Bulgarian
+foo{0[0]}Default
+foo[en]{0[0]}English
+foo[de]{0[0]}Deutsch
+[Spaces]
+key with spaces {0[1]} value
+another with spaces {0[0]} splat!
+[Types]
+int {0[1]} 42
+float {0[0]} 0.44
+boolean {0[0]} NO
+123 {0[1]} strange but acceptable
+[This One Has A ] In It]
+  forks {0[0]} spoons
+repeated = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+long_multiline =
+	line 01 of a very long multiline value
+	line 02 of a very long multiline value
+	line 03 of a very long multiline value
+	line 04 of a very long multiline value
+	line 05 of a very long multiline value
+	line 06 of a very long multiline value
+	line 07 of a very long multiline value
+	line 08 of a very long multiline value
+	line 09 of a very long multiline value
+	line 10 of a very long multiline value
+[unicode]
+japanese = 日本語テスト
+korean = 한국어
+arabic = مرحبا
+emoji = 🎉🐍🔧
+math = ∑∫∂√∞
+accented = café résumé naïve
+zero_width = foo​bar
+rtl = שלום
+[special chars]
+key with spaces = value
+key.with.dots = dotted
+key-with-dashes = dashed
+key_with_underscores = underscored
+key/with/slashes = slashed
+key+with+plus = plussed
+key@with@at = atted
+MiXeD_CaSe_KeY = case insensitive lookup
+url = https://example.com/path?query=1&other=2
+backslash = C:\Users\test\file.txt
+quotes = "double quoted value"
+single_quotes = 'single quoted value'
+empty_quotes = ""
+braces = {not interpolation here}
+parens = (just parentheses)
+brackets = [not a section]
+angle = <html>value</html>
+pipe = one|two|three
+tilde = ~/home/dir
+glob = *.txt
+dollar_literal = $100
+percent_literal = 100%%
+equals_in_value = x=1, y=2, z=3
+colon_in_value = 12:34:56
