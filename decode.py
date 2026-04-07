@@ -1,10 +1,21 @@
+import encodings
+import pkgutil
+
+ALL_CODECS = sorted(
+    name
+    for _, name, _ in pkgutil.iter_modules(encodings.__path__)
+    if not name.startswith("_") and name != "aliases"
+)
+
+
 def FuzzerRunOne(FuzzerInput):
-    half = int(len(FuzzerInput) / 2)
-    A = FuzzerInput[:half]
-    B = FuzzerInput[half:].decode("utf-8", "replace").strip()
+    if len(FuzzerInput) < 2:
+        return
+    codec = ALL_CODECS[FuzzerInput[0] % len(ALL_CODECS)]
+    data = FuzzerInput[1:]
     try:
-        A.decode(B)
+        data.decode(codec)
     except SystemError:
         raise
-    except:
+    except Exception:
         pass
